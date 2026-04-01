@@ -30,6 +30,35 @@
       letter-spacing: 1px;
     }
 
+    /* Loader */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #FAF7F2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s;
+    }
+
+    .loader-gold {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #E8E0D5;
+      border-top: 3px solid #C9A87C;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
     /* Animaciones */
     @keyframes fadeInUp {
       from {
@@ -42,7 +71,6 @@
       }
     }
 
-    /* Línea decorativa */
     .gold-line {
       width: 60px;
       height: 2px;
@@ -57,7 +85,7 @@
       margin: 15px auto 0;
     }
 
-    /* ========== Navegación Responsive ========== */
+    /* Navegación */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -97,7 +125,6 @@
       color: #C9A87C;
     }
 
-    /* Menú hamburguesa */
     .menu-icon {
       display: none;
       font-size: 28px;
@@ -108,12 +135,13 @@
     /* Hero */
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px;
       background: linear-gradient(135deg, #FAF7F2 0%, #F5EFE6 100%);
+      position: relative;
     }
 
     .hero h1 {
-      font-size: 64px;
+      font-size: 72px;
       font-weight: 600;
       color: #C9A87C;
       margin-bottom: 20px;
@@ -137,31 +165,79 @@
       text-decoration: none;
       font-weight: 500;
       transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
     }
 
-    .btn-whatsapp:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-    }
-
-    /* Sección productos */
-    .products {
-      padding: 80px 20px;
-      text-align: center;
+    /* Contador */
+    .countdown {
       background: white;
+      padding: 60px 20px;
+      text-align: center;
     }
 
-    .products h2 {
-      font-size: 36px;
+    .countdown h2 {
+      color: #C9A87C;
+      margin-bottom: 30px;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .timer-box {
+      background: #F5EFE6;
+      padding: 20px;
+      border-radius: 15px;
+      min-width: 100px;
+    }
+
+    .timer-number {
+      font-size: 42px;
+      font-weight: 600;
+      color: #C9A87C;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .timer-label {
+      font-size: 12px;
+      color: #8B7355;
+      letter-spacing: 1px;
+    }
+
+    /* Beneficios */
+    .benefits {
+      padding: 80px 20px;
+      background: #FAF7F2;
+      text-align: center;
+    }
+
+    .benefits-grid {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .benefit-card i {
+      font-size: 40px;
       color: #C9A87C;
       margin-bottom: 15px;
     }
 
-    .section-subtitle {
-      color: #8B7355;
-      margin-bottom: 50px;
-      font-size: 16px;
+    /* Productos */
+    .products {
+      padding: 80px 20px;
+      text-align: center;
+      background: white;
     }
 
     .product-grid {
@@ -193,15 +269,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #C9A87C;
-      font-size: 14px;
+      font-size: 48px;
       transition: all 0.4s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    .product-card:hover .product-image {
-      transform: scale(1.02);
-      box-shadow: 0 15px 30px rgba(201, 168, 124, 0.15);
     }
 
     /* Carrusel */
@@ -229,7 +298,6 @@
       height: 400px;
       background-size: cover;
       background-position: center;
-      background-color: #E8E0D5;
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -249,13 +317,7 @@
       border: none;
       padding: 10px 15px;
       cursor: pointer;
-      font-size: 20px;
       border-radius: 50%;
-      transition: background 0.3s;
-    }
-
-    .carousel-btn:hover {
-      background: rgba(0,0,0,0.8);
     }
 
     .prev { left: 10px; }
@@ -273,8 +335,6 @@
       justify-content: center;
       gap: 40px;
       flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 0 auto;
     }
 
     .testimonial-card {
@@ -282,23 +342,61 @@
       padding: 30px;
       border-radius: 20px;
       max-width: 300px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
-    .testimonial-card p {
-      font-style: italic;
+    /* Galería Instagram */
+    .instagram-gallery {
+      padding: 80px 20px;
+      background: #FAF7F2;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      background: #E8E0D5;
+      height: 250px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    /* About */
+    .about {
+      padding: 80px 40px;
+      background: #F5EFE6;
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about p {
       color: #5A4A3A;
-    }
-
-    .testimonial-card h4 {
-      margin-top: 15px;
-      color: #C9A87C;
+      font-size: 18px;
+      line-height: 1.8;
     }
 
     /* FAQ */
     .faq {
       padding: 80px 20px;
-      background: #F5EFE6;
+      background: white;
       text-align: center;
     }
 
@@ -309,7 +407,7 @@
     }
 
     .faq-item {
-      background: white;
+      background: #FAF7F2;
       margin-bottom: 15px;
       border-radius: 12px;
       overflow: hidden;
@@ -318,16 +416,9 @@
     .faq-question {
       padding: 18px 20px;
       font-weight: 500;
-      color: #2C2C2C;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      transition: background 0.3s;
-    }
-
-    .faq-question:hover {
-      background: #FAF7F2;
     }
 
     .faq-answer {
@@ -336,12 +427,50 @@
       overflow: hidden;
       transition: max-height 0.3s ease;
       color: #6B5A4A;
-      border-top: 1px solid #E8E0D5;
     }
 
     .faq-item.active .faq-answer {
       padding: 18px 20px;
       max-height: 200px;
+    }
+
+    /* Newsletter */
+    .newsletter {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #F5EFE6, #FAF7F2);
+      text-align: center;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 30px auto 0;
+    }
+
+    .newsletter-form input {
+      padding: 15px 20px;
+      border: 1px solid #E8E0D5;
+      border-radius: 40px;
+      flex: 1;
+      min-width: 250px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .newsletter-form button {
+      background: #C9A87C;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .newsletter-form button:hover {
+      background: #b89464;
     }
 
     /* Redes sociales */
@@ -371,7 +500,6 @@
     .social-links a:hover {
       background: #C9A87C;
       color: white;
-      transform: translateY(-2px);
     }
 
     /* Footer */
@@ -381,7 +509,6 @@
       background: #FAF7F2;
       border-top: 1px solid #E8E0D5;
       color: #8B7355;
-      font-size: 14px;
     }
 
     .footer-links {
@@ -392,14 +519,7 @@
       flex-wrap: wrap;
     }
 
-    .footer-links a {
-      color: #8B7355;
-      text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-    /* Botón flotante */
+    /* Botones flotantes */
     .whatsapp-float {
       position: fixed;
       bottom: 30px;
@@ -414,55 +534,62 @@
       justify-content: center;
       font-size: 30px;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-      transition: transform 0.3s;
       z-index: 100;
     }
 
-    .whatsapp-float:hover {
-      transform: scale(1.1);
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: #C9A87C;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      text-decoration: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 100;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 42px;
-      }
-      .navbar {
-        padding: 15px 20px;
-      }
-      .menu-icon {
-        display: block;
-      }
+      .hero h1 { font-size: 42px; }
+      .navbar { padding: 15px 20px; }
+      .menu-icon { display: block; }
       .nav-links {
         position: fixed;
         top: 70px;
         left: -100%;
         width: 100%;
         background: rgba(250, 247, 242, 0.98);
-        backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
         padding: 40px 0;
-        gap: 25px;
-        transition: left 0.3s ease;
-        border-bottom: 1px solid #E8E0D5;
+        transition: left 0.3s;
       }
-      .nav-links.active {
-        left: 0;
-      }
-      .product-card {
-        width: 240px;
-      }
-      .carousel-slide {
-        height: 250px;
-        font-size: 18px;
-      }
+      .nav-links.active { left: 0; }
+      .about { padding: 60px 20px; }
+      .about p { font-size: 16px; }
+      .timer-box { min-width: 70px; padding: 15px; }
+      .timer-number { font-size: 28px; }
     }
   </style>
 </head>
 
 <body>
+
+<div class="loader" id="loader">
+  <div class="loader-gold"></div>
+</div>
 
 <nav class="navbar">
   <a href="#" class="logo">Áurea</a>
@@ -472,7 +599,7 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#">INICIO</a></li>
     <li><a href="#productos">COLECCIÓN</a></li>
-    <li><a href="#carousel">DESTACADOS</a></li>
+    <li><a href="#beneficios">BENEFICIOS</a></li>
     <li><a href="#testimonios">TESTIMONIOS</a></li>
     <li><a href="#nosotras">NOSOTRAS</a></li>
     <li><a href="#contacto">CONTACTO</a></li>
@@ -486,26 +613,34 @@
   <a class="btn-whatsapp" href="https://wa.me/57TU_NUMERO?text=Hola%2C%20vi%20su%20catálogo%20de%20Áurea%20Beauty%20y%20me%20interesa%20saber%20más">📱 Escríbenos por WhatsApp</a>
 </section>
 
+<section class="countdown" id="countdown">
+  <h2>Nuestra colección llega en</h2>
+  <div class="timer">
+    <div class="timer-box"><div class="timer-number" id="days">00</div><div class="timer-label">Días</div></div>
+    <div class="timer-box"><div class="timer-number" id="hours">00</div><div class="timer-label">Horas</div></div>
+    <div class="timer-box"><div class="timer-number" id="minutes">00</div><div class="timer-label">Minutos</div></div>
+    <div class="timer-box"><div class="timer-number" id="seconds">00</div><div class="timer-label">Segundos</div></div>
+  </div>
+</section>
+
+<section id="beneficios" class="benefits">
+  <h2>¿Por qué elegir Áurea?</h2>
+  <div class="gold-line-small"></div>
+  <div class="benefits-grid">
+    <div class="benefit-card"><i class="fas fa-truck"></i><h3>Envíos a todo Colombia</h3><p>Entregas seguras y rápidas</p></div>
+    <div class="benefit-card"><i class="fas fa-gem"></i><h3>Productos premium</h3><p>Calidad y exclusividad</p></div>
+    <div class="benefit-card"><i class="fas fa-heart"></i><h3>Atención personalizada</h3><p>Te asesoramos con cariño</p></div>
+  </div>
+</section>
+
 <section id="productos" class="products">
   <h2>Nuestra Colección</h2>
   <div class="gold-line-small"></div>
   <p class="section-subtitle">Próximamente los mejores productos de belleza</p>
   <div class="product-grid">
-    <div class="product-card">
-      <div class="product-image">✨</div>
-      <h3>Próximamente</h3>
-      <p>Descubre nuestra nueva línea</p>
-    </div>
-    <div class="product-card">
-      <div class="product-image">💄</div>
-      <h3>Próximamente</h3>
-      <p>Exclusividad y calidad</p>
-    </div>
-    <div class="product-card">
-      <div class="product-image">🌟</div>
-      <h3>Próximamente</h3>
-      <p>Para realzar tu belleza</p>
-    </div>
+    <div class="product-card"><div class="product-image">✨</div><h3>Próximamente</h3><p>Descubre nuestra nueva línea</p></div>
+    <div class="product-card"><div class="product-image">💄</div><h3>Próximamente</h3><p>Exclusividad y calidad</p></div>
+    <div class="product-card"><div class="product-image">🌟</div><h3>Próximamente</h3><p>Para realzar tu belleza</p></div>
   </div>
 </section>
 
@@ -514,15 +649,9 @@
   <div class="gold-line-small"></div>
   <div class="carousel-container">
     <div class="carousel-slides" id="carouselSlides">
-      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2080&auto=format');">
-        Próximamente: Nueva Colección
-      </div>
-      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=2070&auto=format');">
-        Productos Exclusivos
-      </div>
-      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=2070&auto=format');">
-        Belleza que Inspira
-      </div>
+      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2080&auto=format');">Próximamente: Nueva Colección</div>
+      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=2070&auto=format');">Productos Exclusivos</div>
+      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=2070&auto=format');">Belleza que Inspira</div>
     </div>
     <button class="carousel-btn prev" id="prevBtn">❮</button>
     <button class="carousel-btn next" id="nextBtn">❯</button>
@@ -533,53 +662,58 @@
   <h2>Lo que dicen nuestras clientas</h2>
   <div class="gold-line-small"></div>
   <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <p>"Los productos de Áurea Beauty transformaron mi rutina. Siento mi piel más radiante."</p>
-      <h4>— María G.</h4>
-    </div>
-    <div class="testimonial-card">
-      <p>"Atención increíble y productos de primera calidad. ¡Totalmente recomendadas!"</p>
-      <h4>— Valentina R.</h4>
-    </div>
-    <div class="testimonial-card">
-      <p>"El diseño de la marca es hermoso y la calidad está a otro nivel."</p>
-      <h4>— Camila S.</h4>
-    </div>
+    <div class="testimonial-card"><p>"Los productos de Áurea Beauty transformaron mi rutina. Siento mi piel más radiante."</p><h4>— María G.</h4></div>
+    <div class="testimonial-card"><p>"Atención increíble y productos de primera calidad. ¡Totalmente recomendadas!"</p><h4>— Valentina R.</h4></div>
+    <div class="testimonial-card"><p>"El diseño de la marca es hermoso y la calidad está a otro nivel."</p><h4>— Camila S.</h4></div>
+  </div>
+</section>
+
+<section class="instagram-gallery">
+  <h2>Síguenos en Instagram</h2>
+  <div class="gold-line-small"></div>
+  <div class="gallery-grid">
+    <div class="gallery-item">✨</div>
+    <div class="gallery-item">💄</div>
+    <div class="gallery-item">🌟</div>
+    <div class="gallery-item">💅</div>
   </div>
 </section>
 
 <section id="nosotras" class="about">
-  <h2>Sobre Áurea</h2>
-  <div class="gold-line-small"></div>
-  <p>En Áurea Beauty creemos que la belleza es un reflejo de tu esencia. Por eso seleccionamos productos que combinan elegancia, calidad y el cuidado que mereces. Cada detalle está pensado para que te sientas única y radiante.</p>
+  <div class="about-content">
+    <h2>Sobre Áurea</h2>
+    <div class="gold-line-small"></div>
+    <p>En Áurea Beauty creemos que la belleza es un reflejo de tu esencia. Por eso seleccionamos productos que combinan elegancia, calidad y el cuidado que mereces. Cada detalle está pensado para que te sientas única y radiante.</p>
+  </div>
 </section>
 
 <section class="faq">
   <h2>Preguntas Frecuentes</h2>
   <div class="gold-line-small"></div>
   <div class="faq-container">
-    <div class="faq-item">
-      <div class="faq-question">¿Cómo puedo comprar? <i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">Escríbenos por WhatsApp al botón flotante o al número en la sección de contacto. Te asesoramos con gusto.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">¿Hacen envíos a todo el país? <i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">Sí, realizamos envíos a toda Colombia. El costo depende de tu ubicación y te lo confirmamos al momento del pedido.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">¿Cuándo estarán disponibles los productos? <i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">Muy pronto lanzaremos nuestra primera colección. Síguenos en redes para enterarte primero.</div>
-    </div>
+    <div class="faq-item"><div class="faq-question">¿Cómo puedo comprar? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Escríbenos por WhatsApp al botón flotante o al número en la sección de contacto. Te asesoramos con gusto.</div></div>
+    <div class="faq-item"><div class="faq-question">¿Hacen envíos a todo el país? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sí, realizamos envíos a toda Colombia. El costo depende de tu ubicación.</div></div>
+    <div class="faq-item"><div class="faq-question">¿Cuándo estarán disponibles los productos? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Muy pronto lanzaremos nuestra primera colección. Síguenos en redes para enterarte primero.</div></div>
   </div>
+</section>
+
+<section class="newsletter">
+  <h2>Recibe novedades primero</h2>
+  <div class="gold-line-small"></div>
+  <p>Suscríbete para enterarte del lanzamiento y promociones exclusivas</p>
+  <form class="newsletter-form" id="newsletterForm">
+    <input type="email" placeholder="Tu correo electrónico" required>
+    <button type="submit">Suscribirme</button>
+  </form>
 </section>
 
 <section id="contacto" class="social">
   <h2>Síguenos y Contáctanos</h2>
   <div class="gold-line-small"></div>
   <div class="social-links">
-    <a href="https://www.instagram.com/shopaurea.co?igsh=Njh5cG5tb2ZvZm8y" target="_blank">📷 Instagram</a>
-    <a href="https://www.tiktok.com/@shopaurea.co?_r=1&_t=ZS-94w6QRNcyyu" target="_blank">🎵 TikTok</a>
-    <a href="https://wa.me/57TU_NUMERO" target="_blank">💬 WhatsApp</a>
+    <a href="https://www.instagram.com/shopaurea.co?igsh=Njh5cG5tb2ZvZm8y" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@shopaurea.co?_r=1&_t=ZS-94w6QRNcyyu" target="_blank">TikTok</a>
+    <a href="https://wa.me/57TU_NUMERO" target="_blank">WhatsApp</a>
   </div>
 </section>
 
@@ -595,21 +729,23 @@
 </footer>
 
 <a href="https://wa.me/57TU_NUMERO" class="whatsapp-float" target="_blank">💬</a>
+<a href="#" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
 
 <script>
+  // Loader
+  window.addEventListener('load', () => {
+    document.getElementById('loader').style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none';
+    }, 500);
+  });
+
   // Menú hamburguesa
   const menuIcon = document.getElementById('menuIcon');
   const navLinks = document.getElementById('navLinks');
-
-  menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-
-  // Cerrar menú al hacer clic en un enlace
+  menuIcon.addEventListener('click', () => navLinks.classList.toggle('active'));
   document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-    });
+    link.addEventListener('click', () => navLinks.classList.remove('active'));
   });
 
   // Navegación suave
@@ -617,50 +753,64 @@
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // Contador (fecha objetivo: 30 días desde ahora)
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + 30);
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+    if (diff <= 0) {
+      document.getElementById('days').innerText = '00';
+      document.getElementById('hours').innerText = '00';
+      document.getElementById('minutes').innerText = '00';
+      document.getElementById('seconds').innerText = '00';
+      return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (86400000)) / 3600000);
+    const minutes = Math.floor((diff % 3600000) / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
+    document.getElementById('days').innerText = days.toString().padStart(2, '0');
+    document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 
   // Carrusel
   let currentSlide = 0;
   const slides = document.querySelector('.carousel-slides');
   const totalSlides = document.querySelectorAll('.carousel-slide').length;
+  function updateCarousel() { slides.style.transform = `translateX(-${currentSlide * 100}%)`; }
+  document.getElementById('nextBtn').addEventListener('click', () => { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); });
+  document.getElementById('prevBtn').addEventListener('click', () => { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; updateCarousel(); });
+  setInterval(() => { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); }, 5000);
 
-  function updateCarousel() {
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-  }
-
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
+  // FAQ
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
   });
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateCarousel();
+  // Scroll top button
+  const scrollTop = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) scrollTop.classList.add('visible');
+    else scrollTop.classList.remove('visible');
   });
 
-  // Auto slide cada 5 segundos
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
-  }, 5000);
-
-  // FAQ acordeón
-  document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-      const faqItem = question.parentElement;
-      faqItem.classList.toggle('active');
-    });
+  // Newsletter alert
+  document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('¡Gracias por suscribirte! Pronto recibirás novedades de Áurea Beauty.');
+    e.target.reset();
   });
 
-  // Animación de entrada al hacer scroll
-  const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+  // Animaciones scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -668,8 +818,7 @@
         entry.target.style.transform = "translateY(0)";
       }
     });
-  }, observerOptions);
-
+  }, { threshold: 0.1 });
   document.querySelectorAll('section').forEach(section => {
     section.style.opacity = "0";
     section.style.transform = "translateY(30px)";
