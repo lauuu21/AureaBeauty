@@ -881,15 +881,24 @@
 <a href="#" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
 
 <script>
-  // Loader CORREGIDO - desaparece completamente después de cargar
-  window.addEventListener('load', function() {
+  function hideLoader() {
     const loader = document.getElementById('loader');
-    loader.classList.add('hidden');
-    // Opcional: removerlo del DOM después de la transición
-    setTimeout(function() {
-      loader.style.display = 'none';
-    }, 500);
-  });
+    if (loader) {
+      loader.classList.add('hidden');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    }
+  }
+
+  // Se oculta rápido
+  document.addEventListener('DOMContentLoaded', hideLoader);
+
+  // Backup por si algo falla
+  window.addEventListener('load', hideLoader);
+
+  // Plan C por si TODO falla
+  setTimeout(hideLoader, 3000);
 
   // Menú hamburguesa
   const menuIcon = document.getElementById('menuIcon');
