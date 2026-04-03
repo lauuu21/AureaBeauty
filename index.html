@@ -6,8 +6,8 @@
   <meta name="description" content="Mila Beauty - Productos de belleza con esencia juvenil. Descubre nuestra colección y contáctanos por WhatsApp.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fuentes modernas -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Clash+Display:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Fuentes premium: Great Vibes (cursiva elegante) + Clash Display (títulos modernos) + Outfit (texto limpio) -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Clash+Display:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
@@ -28,17 +28,19 @@
     h1, h2, h3 {
       font-family: 'Clash Display', sans-serif;
       font-weight: 500;
-      letter-spacing: 0px;
+      letter-spacing: -0.5px;
     }
 
-    /* Cursiva gordita y divertida */
-    .cursive-girly {
-      font-family: 'Pacifico', cursive;
+    /* Logo con fuente cursiva elegante */
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 34px;
       font-weight: 400;
-      letter-spacing: 1px;
+      color: #FF6B9E;
+      text-decoration: none;
     }
 
-    /* Loader - CORREGIDO */
+    /* Loader */
     .loader {
       position: fixed;
       top: 0;
@@ -115,14 +117,6 @@
       z-index: 1000;
     }
 
-    .logo {
-      font-family: 'Pacifico', cursive;
-      font-size: 28px;
-      font-weight: 400;
-      color: #FF6B9E;
-      text-decoration: none;
-    }
-
     .nav-links {
       display: flex;
       gap: 40px;
@@ -160,14 +154,11 @@
     .hero h1 {
       font-size: 72px;
       font-weight: 600;
-      color: #FF6B9E;
+      background: linear-gradient(135deg, #FF6B9E, #FF8FB4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      font-family: 'Pacifico', cursive;
-      font-size: 72px;
-      color: #FF8FB4;
     }
 
     .hero p {
@@ -328,7 +319,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 48px;
+      font-size: 0;
       transition: all 0.4s ease;
     }
 
@@ -447,7 +438,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 48px;
+      font-size: 0;
       transition: transform 0.3s;
     }
 
@@ -692,9 +683,6 @@
       .hero h1 {
         font-size: 42px;
       }
-      .hero h1 span {
-        font-size: 42px;
-      }
       .navbar {
         padding: 15px 20px;
       }
@@ -756,14 +744,14 @@
 </nav>
 
 <section class="hero">
-  <h1><span>Mila</span> Beauty</h1>
+  <h1>Mila Beauty</h1>
   <div class="pink-line"></div>
   <p>Glow moderno, femenino y auténtico. Descubre productos diseñados para brillar.</p>
-  <a class="btn-whatsapp" href="https://wa.me/57TU_NUMERO?text=Hola%2C%20vi%20su%20catálogo%20de%20Mila%20Beauty%20y%20me%20interesa%20saber%20más">📱 Escríbenos por WhatsApp</a>
+  <a class="btn-whatsapp" href="https://wa.me/57TU_NUMERO?text=Hola%2C%20vi%20su%20catálogo%20de%20Mila%20Beauty%20y%20me%20interesa%20saber%20más">Escríbenos por WhatsApp</a>
 </section>
 
 <section class="countdown" id="countdown">
-  <h2>✨ Nuestra colección llega en ✨</h2>
+  <h2>Nuestra colección llega en</h2>
   <div class="timer">
     <div class="timer-box"><div class="timer-number" id="days">00</div><div class="timer-label">Días</div></div>
     <div class="timer-box"><div class="timer-number" id="hours">00</div><div class="timer-label">Horas</div></div>
@@ -787,9 +775,9 @@
   <div class="pink-line-small"></div>
   <p class="section-subtitle">Próximamente los mejores productos de belleza</p>
   <div class="product-grid">
-    <div class="product-card"><div class="product-image">🍓</div><h3>Próximamente</h3><p>Descubre nuestra nueva línea</p></div>
-    <div class="product-card"><div class="product-image">🥝</div><h3>Próximamente</h3><p>Exclusividad y calidad</p></div>
-    <div class="product-card"><div class="product-image">🌸</div><h3>Próximamente</h3><p>Para realzar tu belleza</p></div>
+    <div class="product-card"><div class="product-image"></div><h3>Próximamente</h3><p>Descubre nuestra nueva línea</p></div>
+    <div class="product-card"><div class="product-image"></div><h3>Próximamente</h3><p>Exclusividad y calidad</p></div>
+    <div class="product-card"><div class="product-image"></div><h3>Próximamente</h3><p>Para realzar tu belleza</p></div>
   </div>
 </section>
 
@@ -821,10 +809,10 @@
   <h2>Síguenos en Instagram</h2>
   <div class="pink-line-small"></div>
   <div class="gallery-grid">
-    <div class="gallery-item">🍓</div>
-    <div class="gallery-item">🥝</div>
-    <div class="gallery-item">🌸</div>
-    <div class="gallery-item">💗</div>
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
+    <div class="gallery-item"></div>
   </div>
 </section>
 
@@ -881,6 +869,7 @@
 <a href="#" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
 
 <script>
+  // Loader
   function hideLoader() {
     const loader = document.getElementById('loader');
     if (loader) {
@@ -891,13 +880,8 @@
     }
   }
 
-  // Se oculta rápido
   document.addEventListener('DOMContentLoaded', hideLoader);
-
-  // Backup por si algo falla
   window.addEventListener('load', hideLoader);
-
-  // Plan C por si TODO falla
   setTimeout(hideLoader, 3000);
 
   // Menú hamburguesa
@@ -919,7 +903,7 @@
     });
   });
 
-  // Contador (fecha objetivo: 30 días desde ahora)
+  // Contador
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + 30);
   function updateCountdown() {
@@ -957,12 +941,12 @@
     setInterval(() => { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); }, 5000);
   }
 
-  // FAQ acordeón
+  // FAQ
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
   });
 
-  // Scroll top button
+  // Scroll top
   const scrollTop = document.getElementById('scrollTop');
   if (scrollTop) {
     window.addEventListener('scroll', () => {
@@ -974,4 +958,17 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-  </script>
+
+  // Newsletter
+  const newsletterForm = document.getElementById('newsletterForm');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Gracias por suscribirte. Pronto recibirás novedades de Mila Beauty.');
+      newsletterForm.reset();
+    });
+  }
+</script>
+
+</body>
+</html>
