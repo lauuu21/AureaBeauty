@@ -1,3 +1,22 @@
+¡Tienes toda la razón! El problema es el **loader** (la pantalla de carga). En tu código el loader se queda visible y nunca desaparece completamente. Es un error común cuando se combinan `display: none` con `opacity: 0` y además hay un pequeño bug en el JavaScript.
+
+No te preocupes, es súper fácil de arreglar. **Voy a corregir el código completo** y te lo dejo listo para que solo copies, pegues y cambies tu número de WhatsApp.
+
+---
+
+## 🔧 Corrección del problema
+
+El problema estaba en dos cosas:
+1. El loader no se ocultaba bien después de cargar
+2. Faltaba cerrar el carrusel correctamente (aunque eso no afectaba la carga)
+
+---
+
+## ✅ Código CORREGIDO de MILA (sin pantalla de carga pegada)
+
+**Copia TODO este código y reemplaza el que tienes. Solo cambia los `57TU_NUMERO` por tu WhatsApp.**
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +25,7 @@
   <meta name="description" content="Mila Beauty - Productos de belleza con esencia juvenil. Descubre nuestra colección y contáctanos por WhatsApp.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fuentes modernas: Outfit (cuerpo) + Clash Display (títulos) + Pacifico (cursiva gordita) -->
+  <!-- Fuentes modernas -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Clash+Display:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -31,14 +50,14 @@
       letter-spacing: 0px;
     }
 
-    /* Cursiva gordita y divertida para detalles especiales */
+    /* Cursiva gordita y divertida */
     .cursive-girly {
       font-family: 'Pacifico', cursive;
       font-weight: 400;
       letter-spacing: 1px;
     }
 
-    /* Loader */
+    /* Loader - CORREGIDO */
     .loader {
       position: fixed;
       top: 0;
@@ -50,7 +69,12 @@
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      transition: opacity 0.5s;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .loader.hidden {
+      opacity: 0;
+      visibility: hidden;
     }
 
     .loader-pink {
@@ -79,7 +103,7 @@
       }
     }
 
-    /* Línea decorativa rosa (reemplaza la dorada) */
+    /* Línea decorativa rosa */
     .pink-line {
       width: 60px;
       height: 3px;
@@ -876,21 +900,25 @@
 <a href="#" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
 
 <script>
-  // Loader
-  window.addEventListener('load', () => {
-    document.getElementById('loader').style.opacity = '0';
-    setTimeout(() => {
-      document.getElementById('loader').style.display = 'none';
+  // Loader CORREGIDO - desaparece completamente después de cargar
+  window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    loader.classList.add('hidden');
+    // Opcional: removerlo del DOM después de la transición
+    setTimeout(function() {
+      loader.style.display = 'none';
     }, 500);
   });
 
   // Menú hamburguesa
   const menuIcon = document.getElementById('menuIcon');
   const navLinks = document.getElementById('navLinks');
-  menuIcon.addEventListener('click', () => navLinks.classList.toggle('active'));
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('active'));
-  });
+  if (menuIcon && navLinks) {
+    menuIcon.addEventListener('click', () => navLinks.classList.toggle('active'));
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+  }
 
   // Navegación suave
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -929,4 +957,32 @@
   // Carrusel
   let currentSlide = 0;
   const slides = document.querySelector('.carousel-slides');
-  const totalSlides = document.querySelectorAll('.carousel-sl
+  const totalSlides = document.querySelectorAll('.carousel-slide').length;
+  if (slides && totalSlides > 0) {
+    function updateCarousel() { slides.style.transform = `translateX(-${currentSlide * 100}%)`; }
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    if (prevBtn) prevBtn.addEventListener('click', () => { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; updateCarousel(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); });
+    setInterval(() => { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); }, 5000);
+  }
+
+  // FAQ acordeón
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
+  });
+
+  // Scroll top button
+  const scrollTop = document.getElementById('scrollTop');
+  if (scrollTop) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) scrollTop.classList.add('visible');
+      else scrollTop.classList.remove('visible');
+    });
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Newsletter alert
