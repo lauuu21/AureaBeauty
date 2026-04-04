@@ -1,1040 +1,2624 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mila Beauty | Glow Moderno y Femenino</title>
-  <meta name="description" content="Mila Beauty - Productos de belleza con esencia juvenil. Descubre nuestra colección y contáctanos por WhatsApp.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Mila Beauty | Skincare & Makeup Aesthetic</title>
+  <meta name="description" content="Mila Beauty. Maquillaje, skincare y accesorios con estética elegante, femenina y moderna. Catálogo visual y atención personalizada por WhatsApp." />
 
-  <!-- Fuentes premium (no las típicas de Google Fonts) -->
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/sporting-script" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- =========================
+       GOOGLE FONTS (Mila Vibes)
+       ========================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Texto clean -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Títulos lujo editorial -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Script Logo (similar a tu Mila) -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 
   <style>
+    /* ============================================================
+       MILA BEAUTY — DISEÑO PREMIUM ROSA / CLEAN / AESTHETIC
+       Inspiración: Bloomshell + Notion ordenado + Soft Luxury
+       ============================================================ */
+
+    /* ============= RESET ============= */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Satoshi', 'Outfit', sans-serif;
-      background: #FFFFFF;
-      color: #1A1A1A;
-      line-height: 1.5;
+      font-family: 'Manrope', sans-serif;
+      background: #ffffff;
+      color: #2c2c2c;
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* Títulos con Sora (moderna, impactante) */
-    h1, h2, h3 {
-      font-family: 'Sora', sans-serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    /* Logo con Sporting Script (exclusiva, elegante, tipo firma) */
-    .logo {
-      font-family: 'Sporting Script', cursive;
-      font-size: 38px;
-      font-weight: 400;
-      background: linear-gradient(135deg, #FF6B9E, #FF9BB5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    a {
       text-decoration: none;
+      color: inherit;
     }
 
-    /* Loader */
-    .loader {
+    /* ============= VARIABLES (PALETA MILA) ============= */
+    :root {
+      --white: #ffffff;
+      --black: #2c2c2c;
+
+      --soft-pink: #fef4f7;
+      --soft-pink-2: #f8e1ea;
+
+      --rose-100: #f7d6e0;
+      --rose-200: #e8afc1;
+      --rose-300: #d98aa5;
+      --rose-400: #b84c6e;
+
+      --champagne: #ead8cf;
+
+      --gray-100: #fafafa;
+      --gray-200: #f2f2f2;
+      --gray-300: #e6e6e6;
+      --gray-500: #6b6b6b;
+
+      --shadow-soft: 0 10px 35px rgba(0,0,0,0.06);
+      --shadow-soft-2: 0 18px 45px rgba(184, 76, 110, 0.12);
+
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+    }
+
+    /* ============= CONTAINER ============= */
+    .container {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ============= TYPO ============= */
+    h1, h2, h3, h4 {
+      font-family: "DM Serif Display", serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--black);
+    }
+
+    .kicker {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--rose-400);
+      font-weight: 700;
+      opacity: 0.85;
+    }
+
+    .subtitle {
+      color: var(--gray-500);
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* ============= BOTONES ============= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 13px 30px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--rose-400);
+      color: white;
+      box-shadow: var(--shadow-soft-2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #a63f5f;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(184, 76, 110, 0.35);
+      color: var(--rose-400);
+    }
+
+    .btn-outline:hover {
+      background: var(--rose-400);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-soft {
+      background: rgba(184, 76, 110, 0.10);
+      border: 1px solid rgba(184, 76, 110, 0.20);
+      color: var(--rose-400);
+    }
+
+    .btn-soft:hover {
+      background: rgba(184, 76, 110, 0.18);
+      transform: translateY(-2px);
+    }
+
+    /* ============= BADGES ============= */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--black);
+      backdrop-filter: blur(10px);
+    }
+
+    .badge i {
+      color: var(--rose-400);
+    }
+
+    /* ============= HEADER ============= */
+    .site-header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background: #FFFFFF;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 0.5s, visibility 0.5s;
+      z-index: 2000;
+      padding: 16px 0;
+      background: rgba(255,255,255,0.82);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      backdrop-filter: blur(12px);
     }
 
-    .loader.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    .loader-pink {
-      width: 50px;
-      height: 50px;
-      border: 3px solid #FFE0EB;
-      border-top: 3px solid #FF6B9E;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Animaciones */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Línea decorativa con degradado */
-    .pink-line {
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, #FF6B9E, #FFB3C6);
-      margin: 20px auto;
-      border-radius: 10px;
-    }
-
-    .pink-line-small {
-      width: 50px;
-      height: 3px;
-      background: linear-gradient(90deg, #FF6B9E, #FFB3C6);
-      margin: 15px auto 0;
-      border-radius: 10px;
-    }
-
-    /* Navegación */
-    .navbar {
+    .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 25px 50px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #F0F0F0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      gap: 18px;
+    }
+
+    .logo {
+      font-family: "Allura", cursive;
+      font-size: 2.6rem;
+      font-weight: 400;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--rose-400);
+      display: inline-block;
+      margin-top: 10px;
     }
 
     .nav-links {
       display: flex;
-      gap: 50px;
+      gap: 30px;
       list-style: none;
+      align-items: center;
     }
 
     .nav-links a {
-      text-decoration: none;
-      color: #4A4A4A;
-      font-size: 14px;
-      letter-spacing: 1px;
-      font-weight: 500;
-      transition: color 0.3s;
+      font-size: 0.85rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: rgba(44,44,44,0.75);
+      transition: 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: #FF6B9E;
+      color: var(--rose-400);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
     }
 
     .menu-icon {
       display: none;
-      font-size: 28px;
-      color: #FF6B9E;
+      font-size: 1.3rem;
+      color: var(--rose-400);
       cursor: pointer;
     }
 
-    /* Hero */
+    /* ============= HERO ============= */
     .hero {
-      text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(135deg, #FFFFFF 0%, #FFF5F8 100%);
+      padding: 155px 0 80px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #ffffff 0%, var(--soft-pink) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 4.2rem;
+      line-height: 1.05;
+      margin: 18px 0 18px;
+    }
+
+    .hero-title span {
+      color: var(--rose-400);
+      font-style: italic;
+    }
+
+    .hero-text {
+      font-size: 1.1rem;
+      color: var(--gray-500);
+      max-width: 600px;
+      margin-bottom: 26px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 18px;
+      padding: 16px 18px;
+      min-width: 160px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      backdrop-filter: blur(12px);
+    }
+
+    .stat h3 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: var(--black);
+    }
+
+    .stat p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      background: white;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      filter: saturate(1.05);
+    }
+
+    .hero-card-overlay {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-card-overlay .badge {
+      background: rgba(255,255,255,0.80);
+    }
+
+    .floating-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(55px);
+      opacity: 0.55;
+      z-index: 0;
+    }
+
+    .shape-1 {
+      width: 350px;
+      height: 350px;
+      background: rgba(184, 76, 110, 0.20);
+      top: -90px;
+      left: -120px;
+    }
+
+    .shape-2 {
+      width: 450px;
+      height: 450px;
+      background: rgba(232, 175, 193, 0.35);
+      bottom: -220px;
+      right: -180px;
+    }
+
+    /* ============= SECTION BASE ============= */
+    .section {
+      padding: 95px 0;
       position: relative;
     }
 
-    .hero h1 {
-      font-size: 80px;
-      font-weight: 700;
-      background: linear-gradient(135deg, #FF6B9E, #FF9BB5, #FFB3C6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 25px;
-      letter-spacing: -0.03em;
+    .section.soft {
+      background: var(--soft-pink);
     }
 
-    .hero p {
-      font-size: 18px;
-      color: #6B6B6B;
-      max-width: 550px;
-      margin: 0 auto 35px;
-      font-weight: 400;
-    }
-
-    .btn-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: linear-gradient(135deg, #FF6B9E, #FF85AD);
-      color: white;
-      padding: 16px 40px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 25px rgba(255, 107, 158, 0.25);
-      border: none;
-    }
-
-    .btn-whatsapp:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(255, 107, 158, 0.35);
-    }
-
-    /* Contador */
-    .countdown {
-      background: #FFFFFF;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .countdown h2 {
-      color: #FF6B9E;
-      margin-bottom: 40px;
-      font-size: 32px;
-      font-weight: 600;
-    }
-
-    .timer {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .timer-box {
-      background: #FFF5F8;
-      padding: 25px 30px;
-      border-radius: 25px;
-      min-width: 110px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-      border: 1px solid #FFE0EB;
-      transition: transform 0.3s;
-    }
-
-    .timer-box:hover {
-      transform: translateY(-5px);
-    }
-
-    .timer-number {
-      font-size: 48px;
-      font-weight: 700;
-      color: #FF6B9E;
-      font-family: 'Sora', sans-serif;
-    }
-
-    .timer-label {
-      font-size: 13px;
-      color: #8B8B8B;
-      letter-spacing: 1px;
-      font-weight: 500;
-    }
-
-    /* Beneficios */
-    .benefits {
-      padding: 100px 20px;
-      background: #FFF9FB;
-      text-align: center;
-    }
-
-    .benefits h2 {
-      color: #FF6B9E;
-      font-size: 36px;
-      font-weight: 600;
-    }
-
-    .benefits-grid {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      flex-wrap: wrap;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .benefit-card {
-      text-align: center;
-      max-width: 220px;
+    .section.white {
       background: white;
-      padding: 35px 25px;
-      border-radius: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-      transition: all 0.3s ease;
-      border: 1px solid #FFE0EB;
     }
 
-    .benefit-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 35px rgba(255, 107, 158, 0.08);
-      border-color: #FFB3C6;
-    }
-
-    .benefit-card i {
-      font-size: 45px;
-      color: #FF6B9E;
-      margin-bottom: 20px;
-    }
-
-    .benefit-card h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    /* Productos */
-    .products {
-      padding: 100px 20px;
+    .section-header {
       text-align: center;
-      background: #FFFFFF;
+      margin-bottom: 55px;
     }
 
-    .products h2 {
-      color: #FF6B9E;
-      font-size: 36px;
-      font-weight: 600;
+    .section-header h2 {
+      font-size: 3rem;
+      margin: 12px 0 12px;
     }
 
-    .section-subtitle {
-      color: #8B8B8B;
-      margin-bottom: 60px;
-      font-size: 16px;
-      font-weight: 400;
+    .divider {
+      width: 75px;
+      height: 2px;
+      background: var(--rose-400);
+      margin: 14px auto 20px;
+      border-radius: 999px;
+      opacity: 0.85;
     }
 
-    .product-grid {
+    /* ============= TRUST BAR ============= */
+    .trust-bar {
+      margin-top: 30px;
       display: flex;
       justify-content: center;
-      gap: 50px;
+      gap: 16px;
       flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
+    }
+
+    /* ============= CATEGORY GRID ============= */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 22px;
+    }
+
+    .category-card {
+      grid-column: span 4;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      min-height: 330px;
+      cursor: pointer;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.06);
+      background: #f5f0f2;
+      transition: 0.35s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .category-card .bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s ease;
+    }
+
+    .category-card:hover .bg {
+      transform: scale(1.05);
+    }
+
+    .category-card .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.42) 100%);
+    }
+
+    .category-card .content {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+      color: white;
+      z-index: 2;
+    }
+
+    .category-card .content h3 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .category-card .content p {
+      font-size: 0.95rem;
+      opacity: 0.95;
+      max-width: 300px;
+    }
+
+    .category-card .tag {
+      display: inline-flex;
+      margin-top: 14px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(10px);
+      font-size: 0.85rem;
+      font-weight: 800;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* ============= FEATURED PRODUCTS ============= */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
     }
 
     .product-card {
-      width: 290px;
-      text-align: center;
-      background: #FFFFFF;
-      padding: 25px;
-      border-radius: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-      transition: all 0.4s ease;
-      cursor: pointer;
-      border: 1px solid #F0F0F0;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+      position: relative;
     }
 
     .product-card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 25px 40px rgba(255, 107, 158, 0.12);
-      border-color: #FFB3C6;
+      transform: translateY(-6px);
+      border-color: rgba(184, 76, 110, 0.25);
     }
 
-    .product-image {
+    .product-img {
       width: 100%;
-      height: 280px;
-      background: linear-gradient(135deg, #FFF5F8, #FFE8F0);
-      border-radius: 25px;
-      margin-bottom: 20px;
-      transition: all 0.4s ease;
-    }
-
-    /* Carrusel */
-    .carousel-section {
-      padding: 80px 20px;
-      background: #FFF9FB;
-      text-align: center;
-    }
-
-    .carousel-section h2 {
-      color: #FF6B9E;
-      font-size: 36px;
-    }
-
-    .carousel-container {
-      max-width: 900px;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 30px;
-      position: relative;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-    }
-
-    .carousel-slides {
-      display: flex;
-      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .carousel-slide {
-      min-width: 100%;
-      height: 450px;
+      height: 250px;
       background-size: cover;
       background-position: center;
+      background-color: #f5f0f2;
+    }
+
+    .product-body {
+      padding: 18px 18px 20px;
+    }
+
+    .product-body h3 {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .product-body p {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+      margin-bottom: 14px;
+    }
+
+    .product-meta {
       display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding: 40px;
-      color: white;
-      text-shadow: 0 2px 15px rgba(0,0,0,0.2);
-      font-family: 'Sora', sans-serif;
-      font-size: 28px;
-      font-weight: 600;
-    }
-
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.9);
-      color: #FF6B9E;
-      border: none;
-      padding: 12px 18px;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: all 0.3s;
-      font-size: 18px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .carousel-btn:hover {
-      background: #FF6B9E;
-      color: white;
-    }
-
-    .prev { left: 20px; }
-    .next { right: 20px; }
-
-    /* Testimonios */
-    .testimonials {
-      padding: 100px 20px;
-      background: #FFFFFF;
-      text-align: center;
-    }
-
-    .testimonials h2 {
-      color: #FF6B9E;
-      font-size: 36px;
-    }
-
-    .testimonial-grid {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
       flex-wrap: wrap;
-      max-width: 1100px;
-      margin: 0 auto;
     }
 
-    .testimonial-card {
-      background: #FFF9FB;
-      padding: 35px;
-      border-radius: 30px;
-      max-width: 320px;
-      transition: all 0.3s;
-      border: 1px solid #FFE0EB;
+    .price {
+      font-weight: 900;
+      color: var(--rose-400);
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
     }
 
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      border-color: #FFB3C6;
+    .pill {
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: rgba(44,44,44,0.8);
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.8);
     }
 
-    /* Galería Instagram */
-    .instagram-gallery {
-      padding: 100px 20px;
-      background: #FFF9FB;
-      text-align: center;
-    }
-
-    .instagram-gallery h2 {
-      color: #FF6B9E;
-      font-size: 36px;
-    }
-
-    .gallery-grid {
+    /* ============= CTA BANNER ============= */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(184,76,110,0.10) 0%, rgba(232,175,193,0.22) 55%, rgba(234,216,207,0.20) 100%);
+      border: 1px solid rgba(184, 76, 110, 0.15);
+      border-radius: 34px;
+      padding: 40px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      margin: 0 auto;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.06);
+      overflow: hidden;
+      position: relative;
     }
 
-    .gallery-item {
-      background: linear-gradient(135deg, #FFE8F0, #FFD5E3);
-      height: 280px;
-      border-radius: 25px;
-      transition: all 0.3s;
+    .cta-banner h3 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
 
-    .gallery-item:hover {
-      transform: scale(1.02);
-      box-shadow: 0 15px 30px rgba(255, 107, 158, 0.1);
+    .cta-banner p {
+      color: var(--gray-500);
+      font-size: 1rem;
+      max-width: 650px;
     }
 
-    /* About */
-    .about {
-      padding: 100px 40px;
-      background: #FFFFFF;
-      text-align: center;
+    .cta-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .about-content {
-      max-width: 750px;
-      margin: 0 auto;
-      text-align: center;
+    /* ============= MINI DECORATIONS ============= */
+    .sparkle {
+      position: absolute;
+      opacity: 0.22;
+      font-size: 2.8rem;
+      color: var(--rose-400);
+      filter: blur(0.2px);
     }
 
-    .about h2 {
-      color: #FF6B9E;
-      font-size: 36px;
+    .sparkle.s1 { top: 20px; right: 30px; transform: rotate(12deg); }
+    .sparkle.s2 { bottom: 30px; left: 35px; transform: rotate(-8deg); opacity: 0.17; }
+
+    /* ============= HOW IT WORKS ============= */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
     }
 
-    .about p {
-      color: #5A5A5A;
-      font-size: 18px;
-      line-height: 1.8;
-      font-weight: 400;
+    .step-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.05);
+      padding: 26px;
+      transition: 0.3s ease;
     }
 
-    /* FAQ */
-    .faq {
-      padding: 100px 20px;
-      background: #FFF9FB;
-      text-align: center;
+    .step-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(184,76,110,0.22);
     }
 
-    .faq h2 {
-      color: #FF6B9E;
-      font-size: 36px;
+    .step-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(184,76,110,0.12);
+      border: 1px solid rgba(184,76,110,0.15);
+      margin-bottom: 16px;
+      color: var(--rose-400);
+      font-size: 1.2rem;
     }
 
-    .faq-container {
-      max-width: 750px;
-      margin: 0 auto;
+    .step-card h3 {
+      font-size: 1.55rem;
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      color: var(--gray-500);
+      font-size: 0.98rem;
+    }
+
+    /* ============= ABOUT SECTION ============= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-img {
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+
+    .about-text h2 {
+      font-size: 3rem;
+      margin: 10px 0 14px;
       text-align: left;
     }
 
-    .faq-item {
-      background: white;
-      margin-bottom: 20px;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid #FFE0EB;
-      transition: all 0.3s;
+    .about-text .divider {
+      margin: 14px 0 20px;
     }
 
-    .faq-item:hover {
-      border-color: #FFB3C6;
+    .about-text p {
+      color: var(--gray-500);
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+      line-height: 1.8;
     }
 
-    .faq-question {
-      padding: 22px 25px;
-      font-weight: 600;
-      cursor: pointer;
+    .about-bullets {
+      margin-top: 22px;
       display: flex;
-      justify-content: space-between;
-      color: #FF6B9E;
-      font-family: 'Sora', sans-serif;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .faq-answer {
-      padding: 0 25px;
-      max-height: 0;
+    .bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-weight: 700;
+      color: rgba(44,44,44,0.82);
+      font-size: 0.95rem;
+    }
+
+    .bullet i {
+      color: var(--rose-400);
+      margin-top: 4px;
+    }
+
+    /* ============= INSTAGRAM GRID ============= */
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .insta-item {
+      grid-column: span 3;
+      border-radius: 22px;
       overflow: hidden;
-      transition: max-height 0.3s ease;
-      color: #6B6B6B;
+      position: relative;
+      background: #f5f0f2;
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.05);
+      transition: 0.35s ease;
+      cursor: pointer;
     }
 
-    .faq-item.active .faq-answer {
-      padding: 0 25px 22px 25px;
-      max-height: 200px;
+    .insta-item:hover {
+      transform: translateY(-5px) scale(1.01);
+      border-color: rgba(184,76,110,0.18);
     }
 
-    /* Newsletter */
-    .newsletter {
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #FFE8F0, #FFF0F5);
+    .insta-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.32) 100%);
+      opacity: 0;
+      transition: 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      color: white;
+    }
+
+    .insta-item:hover .insta-overlay {
+      opacity: 1;
+    }
+
+    /* ============= NEWSLETTER ============= */
+    .newsletter-box {
+      background: white;
+      border-radius: 34px;
+      padding: 45px;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 18px 55px rgba(0,0,0,0.06);
       text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
     }
 
-    .newsletter h2 {
-      color: #FF6B9E;
-      font-size: 36px;
+    .newsletter-box h2 {
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-box p {
+      color: var(--gray-500);
+      margin-bottom: 28px;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
     .newsletter-form {
       display: flex;
+      gap: 12px;
       justify-content: center;
-      gap: 15px;
       flex-wrap: wrap;
-      max-width: 550px;
-      margin: 40px auto 0;
+      margin-top: 14px;
     }
 
     .newsletter-form input {
-      padding: 16px 24px;
-      border: 2px solid #FFE0EB;
-      border-radius: 60px;
       flex: 1;
-      min-width: 260px;
-      font-family: 'Satoshi', sans-serif;
-      background: white;
-      font-size: 15px;
+      min-width: 250px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(184,76,110,0.28);
+      outline: none;
+      font-size: 0.95rem;
+      font-family: "Manrope", sans-serif;
+      transition: 0.25s ease;
     }
 
     .newsletter-form input:focus {
-      outline: none;
-      border-color: #FF6B9E;
+      border-color: rgba(184,76,110,0.55);
+      box-shadow: 0 0 0 6px rgba(184,76,110,0.08);
     }
 
-    .newsletter-form button {
-      background: linear-gradient(135deg, #FF6B9E, #FF85AD);
-      color: white;
-      border: none;
-      padding: 16px 35px;
-      border-radius: 60px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.3s;
-      font-size: 15px;
+    /* ============= FOOTER ============= */
+    .footer {
+      background: linear-gradient(180deg, var(--soft-pink) 0%, #ffffff 100%);
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding: 70px 0 45px;
+      margin-top: 40px;
     }
 
-    .newsletter-form button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 107, 158, 0.3);
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 30px;
     }
 
-    /* Redes sociales */
-    .social {
-      padding: 80px 20px;
-      text-align: center;
-      background: #FFFFFF;
+    .footer-brand .logo {
+      font-size: 2.4rem;
     }
 
-    .social h2 {
-      color: #FF6B9E;
-      font-size: 32px;
+    .footer-brand p {
+      margin-top: 10px;
+      color: var(--gray-500);
+      max-width: 320px;
+      line-height: 1.7;
+      font-size: 0.98rem;
     }
 
-    .social-links {
+    .footer-col h4 {
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+
+    .footer-col a {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: rgba(44,44,44,0.78);
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--rose-400);
+      transform: translateX(2px);
+    }
+
+    .footer-bottom {
+      margin-top: 45px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(0,0,0,0.06);
       display: flex;
-      justify-content: center;
-      gap: 45px;
+      justify-content: space-between;
+      gap: 20px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      color: var(--gray-500);
+      font-weight: 700;
+      font-size: 0.9rem;
     }
 
-    .social-links a {
-      text-decoration: none;
-      color: #6B6B6B;
-      font-size: 16px;
-      padding: 12px 28px;
-      border: 2px solid #FFE0EB;
-      border-radius: 60px;
-      transition: all 0.3s;
-      font-weight: 500;
-    }
-
-    .social-links a:hover {
-      background: #FF6B9E;
-      color: white;
-      border-color: #FF6B9E;
-      transform: translateY(-2px);
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 50px 20px;
-      background: #FFF9FB;
-      border-top: 1px solid #FFE0EB;
-      color: #8B8B8B;
-    }
-
-    .footer-links {
+    .social-row {
       display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 25px;
-      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
     }
 
-    .footer-links a {
-      color: #8B8B8B;
-      text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .footer-links a:hover {
-      color: #FF6B9E;
-    }
-
-    /* Botones flotantes */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: linear-gradient(135deg, #FF6B9E, #FF85AD);
-      color: white;
-      width: 60px;
-      height: 60px;
+    .social-btn {
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
-      text-decoration: none;
-      box-shadow: 0 8px 25px rgba(255, 107, 158, 0.35);
-      transition: all 0.3s;
-      z-index: 100;
+      background: rgba(184,76,110,0.10);
+      border: 1px solid rgba(184,76,110,0.15);
+      color: var(--rose-400);
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .social-btn:hover {
+      background: var(--rose-400);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ============= WHATSAPP FLOAT ============= */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--rose-400);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 18px 45px rgba(184,76,110,0.28);
+      z-index: 9999;
+      transition: 0.25s ease;
     }
 
     .whatsapp-float:hover {
-      transform: scale(1.1);
-      box-shadow: 0 12px 30px rgba(255, 107, 158, 0.45);
+      transform: scale(1.05);
+      background: #a63f5f;
     }
 
-    .scroll-top {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      background: #FFFFFF;
-      color: #FF6B9E;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      text-decoration: none;
-      opacity: 0;
-      transition: all 0.3s;
-      z-index: 100;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      border: 1px solid #FFE0EB;
+    /* ============= MOBILE MENU ============= */
+    @media (max-width: 950px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-title {
+        font-size: 3.2rem;
+      }
+
+      .hero-card img {
+        height: 420px;
+      }
+
+      .category-card {
+        grid-column: span 12;
+        min-height: 280px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-img img {
+        height: 420px;
+      }
+
+      .insta-item {
+        grid-column: span 6;
+        height: 220px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
-    .scroll-top.visible {
-      opacity: 1;
-    }
-
-    .scroll-top:hover {
-      background: #FF6B9E;
-      color: white;
-      transform: translateY(-3px);
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 48px;
-      }
-      .navbar {
-        padding: 18px 25px;
-      }
       .menu-icon {
         display: block;
       }
+
       .nav-links {
         position: fixed;
-        top: 70px;
+        top: 72px;
         left: -100%;
         width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(12px);
         flex-direction: column;
         align-items: center;
         padding: 40px 0;
-        gap: 30px;
-        transition: left 0.3s;
-        border-bottom: 1px solid #FFE0EB;
+        transition: left 0.3s ease;
+        gap: 22px;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
       }
+
       .nav-links.active {
         left: 0;
       }
-      .about {
-        padding: 60px 25px;
+
+      .header-actions {
+        display: none;
       }
-      .about p {
-        font-size: 16px;
+
+      .hero-title {
+        font-size: 2.8rem;
       }
-      .timer-box {
-        min-width: 85px;
-        padding: 18px;
+
+      .section-header h2 {
+        font-size: 2.4rem;
       }
-      .timer-number {
-        font-size: 32px;
+
+      .cta-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
       }
-      .carousel-slide {
-        height: 280px;
-        font-size: 18px;
+
+      .cta-actions {
+        justify-content: center;
+      }
+
+      .insta-item {
+        grid-column: span 12;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .social-row {
+        justify-content: center;
+        width: 100%;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-<div class="loader" id="loader">
-  <div class="loader-pink"></div>
-</div>
+  <!-- ===========================
+       HEADER
+  ============================ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#inicio" class="logo">
+          Mila <span class="logo-dot"></span>
+        </a>
 
-<nav class="navbar">
-  <a href="#" class="logo">Mila</a>
-  <div class="menu-icon" id="menuIcon">
-    <i class="fas fa-bars"></i>
-  </div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#">INICIO</a></li>
-    <li><a href="#productos">COLECCIÓN</a></li>
-    <li><a href="#beneficios">BENEFICIOS</a></li>
-    <li><a href="#testimonios">TESTIMONIOS</a></li>
-    <li><a href="#nosotras">NOSOTRAS</a></li>
-    <li><a href="#contacto">CONTACTO</a></li>
-  </ul>
-</nav>
+        <div class="menu-icon" id="menuIcon">
+          <i class="fas fa-bars"></i>
+        </div>
 
-<section class="hero">
-  <h1>Mila Beauty</h1>
-  <div class="pink-line"></div>
-  <p>Glow moderno, femenino y auténtico. Descubre productos diseñados para brillar.</p>
-  <a class="btn-whatsapp" href="https://wa.me/57TU_NUMERO?text=Hola%2C%20vi%20su%20catálogo%20de%20Mila%20Beauty%20y%20me%20interesa%20saber%20más">Escríbenos por WhatsApp</a>
-</section>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#categorias">Categorías</a></li>
+          <li><a href="#coleccion">Colección</a></li>
+          <li><a href="#como-comprar">Cómo comprar</a></li>
+          <li><a href="#nosotras">Nosotras</a></li>
+          <li><a href="#instagram">Instagram</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-<section class="countdown" id="countdown">
-  <h2>Nuestra colección llega en</h2>
-  <div class="timer">
-    <div class="timer-box"><div class="timer-number" id="days">00</div><div class="timer-label">Días</div></div>
-    <div class="timer-box"><div class="timer-number" id="hours">00</div><div class="timer-label">Horas</div></div>
-    <div class="timer-box"><div class="timer-number" id="minutes">00</div><div class="timer-label">Minutos</div></div>
-    <div class="timer-box"><div class="timer-number" id="seconds">00</div><div class="timer-label">Segundos</div></div>
-  </div>
-</section>
-
-<section id="beneficios" class="benefits">
-  <h2>¿Por qué elegir Mila?</h2>
-  <div class="pink-line-small"></div>
-  <div class="benefits-grid">
-    <div class="benefit-card"><i class="fas fa-truck"></i><h3>Envíos a todo Colombia</h3><p>Entregas seguras y rápidas</p></div>
-    <div class="benefit-card"><i class="fas fa-seedling"></i><h3>Productos clean</h3><p>Fórmulas pensadas en ti</p></div>
-    <div class="benefit-card"><i class="fas fa-heart"></i><h3>Atención personalizada</h3><p>Te asesoramos con cariño</p></div>
-  </div>
-</section>
-
-<section id="productos" class="products">
-  <h2>Nuestra Colección</h2>
-  <div class="pink-line-small"></div>
-  <p class="section-subtitle">Próximamente los mejores productos de belleza</p>
-  <div class="product-grid">
-    <div class="product-card"><div class="product-image"></div><h3>Próximamente</h3><p>Descubre nuestra nueva línea</p></div>
-    <div class="product-card"><div class="product-image"></div><h3>Próximamente</h3><p>Exclusividad y calidad</p></div>
-    <div class="product-card"><div class="product-image"></div><h3>Próximamente</h3><p>Para realzar tu belleza</p></div>
-  </div>
-</section>
-
-<section id="carousel" class="carousel-section">
-  <h2>Lo más deseado</h2>
-  <div class="pink-line-small"></div>
-  <div class="carousel-container">
-    <div class="carousel-slides" id="carouselSlides">
-      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2080&auto=format');">Próximamente: Nueva Colección</div>
-      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1611085583191-a3b181a88401?q=80&w=2070&auto=format');">Productos Exclusivos</div>
-      <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=2070&auto=format');">Belleza que Inspira</div>
+        <div class="header-actions">
+          <a href="#coleccion" class="btn btn-soft"><i class="fa-solid fa-heart"></i> Favoritos</a>
+          <a href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20hacer%20un%20pedido%20✨" target="_blank" class="btn btn-primary">
+            <i class="fa-brands fa-whatsapp"></i> Comprar
+          </a>
+        </div>
+      </div>
     </div>
-    <button class="carousel-btn prev" id="prevBtn">❮</button>
-    <button class="carousel-btn next" id="nextBtn">❯</button>
-  </div>
-</section>
+  </header>
 
-<section id="testimonios" class="testimonials">
-  <h2>Lo que dicen nuestras clientas</h2>
-  <div class="pink-line-small"></div>
-  <div class="testimonial-grid">
-    <div class="testimonial-card"><p>"Los productos de Mila transformaron mi rutina. Siento mi piel más radiante."</p><h4>— María G.</h4></div>
-    <div class="testimonial-card"><p>"Atención increíble y productos de primera calidad. ¡Totalmente recomendadas!"</p><h4>— Valentina R.</h4></div>
-    <div class="testimonial-card"><p>"El diseño de la marca es hermoso y la calidad está a otro nivel."</p><h4>— Camila S.</h4></div>
-  </div>
-</section>
+  <!-- ===========================
+       HERO
+  ============================ -->
+  <main id="inicio">
+    <section class="hero">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
 
-<section class="instagram-gallery">
-  <h2>Síguenos en Instagram</h2>
-  <div class="pink-line-small"></div>
-  <div class="gallery-grid">
-    <div class="gallery-item"></div>
-    <div class="gallery-item"></div>
-    <div class="gallery-item"></div>
-    <div class="gallery-item"></div>
-  </div>
-</section>
+      <div class="container">
+        <div class="hero-grid">
 
-<section id="nosotras" class="about">
-  <div class="about-content">
-    <h2>Sobre Mila</h2>
-    <div class="pink-line-small"></div>
-    <p>En Mila Beauty creemos que la belleza es un reflejo de tu esencia. Por eso seleccionamos productos que combinan frescura, calidad y el cuidado que mereces. Cada detalle está pensado para que te sientas única y radiante.</p>
-  </div>
-</section>
+          <!-- LEFT -->
+          <div data-aos="fade-up" style="z-index: 2;">
+            <div class="kicker">Soft Luxury Beauty</div>
 
-<section class="faq">
-  <h2>Preguntas Frecuentes</h2>
-  <div class="pink-line-small"></div>
-  <div class="faq-container">
-    <div class="faq-item"><div class="faq-question">¿Cómo puedo comprar? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Escríbenos por WhatsApp al botón flotante o al número en la sección de contacto. Te asesoramos con gusto.</div></div>
-    <div class="faq-item"><div class="faq-question">¿Hacen envíos a todo el país? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sí, realizamos envíos a toda Colombia. El costo depende de tu ubicación.</div></div>
-    <div class="faq-item"><div class="faq-question">¿Cuándo estarán disponibles los productos? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Muy pronto lanzaremos nuestra primera colección. Síguenos en redes para enterarte primero.</div></div>
-  </div>
-</section>
+            <h1 class="hero-title">
+              Tu belleza se siente <span>más Mila</span>
+            </h1>
 
-<section class="newsletter">
-  <h2>Recibe novedades primero</h2>
-  <div class="pink-line-small"></div>
-  <p>Suscríbete para enterarte del lanzamiento y promociones exclusivas</p>
-  <form class="newsletter-form" id="newsletterForm">
-    <input type="email" placeholder="Tu correo electrónico" required>
-    <button type="submit">Suscribirme</button>
-  </form>
-</section>
+            <p class="hero-text">
+              Skincare, maquillaje y accesorios con estética delicada, glow natural y una vibra premium.
+              Explora el catálogo y compra fácil por WhatsApp con asesoría personalizada.
+            </p>
 
-<section id="contacto" class="social">
-  <h2>Síguenos y Contáctanos</h2>
-  <div class="pink-line-small"></div>
-  <div class="social-links">
-    <a href="https://www.instagram.com/shopaurea.co?igsh=Njh5cG5tb2ZvZm8y" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@shopaurea.co?_r=1&_t=ZS-94w6QRNcyyu" target="_blank">TikTok</a>
-    <a href="https://wa.me/57TU_NUMERO" target="_blank">WhatsApp</a>
-  </div>
-</section>
+            <div class="hero-buttons">
+              <a href="#categorias" class="btn btn-primary">
+                <i class="fa-solid fa-sparkles"></i> Ver categorías
+              </a>
+              <a href="#coleccion" class="btn btn-outline">
+                <i class="fa-solid fa-bag-shopping"></i> Ver colección
+              </a>
+            </div>
 
-<footer>
-  <div class="footer-links">
-    <a href="#">Inicio</a>
-    <a href="#productos">Colección</a>
-    <a href="#nosotras">Nosotras</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-  <p>© 2026 Mila Beauty - Todos los derechos reservados</p>
-  <p style="margin-top: 12px; font-size: 13px;">Glow que transforma</p>
-</footer>
+            <div class="trust-bar">
+              <div class="badge"><i class="fa-solid fa-truck-fast"></i> Envíos Colombia</div>
+              <div class="badge"><i class="fa-solid fa-heart"></i> Beauty & Care</div>
+              <div class="badge"><i class="fa-solid fa-star"></i> Selección premium</div>
+            </div>
 
-<a href="https://wa.me/57TU_NUMERO" class="whatsapp-float" target="_blank">💬</a>
-<a href="#" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
+            <div class="hero-stats">
+              <div class="stat">
+                <h3>+150</h3>
+                <p>Productos seleccionados</p>
+              </div>
+              <div class="stat">
+                <h3>Glow real</h3>
+                <p>Rutinas que funcionan</p>
+              </div>
+              <div class="stat">
+                <h3>Asesoría</h3>
+                <p>Recomendación personalizada</p>
+              </div>
+            </div>
+          </div>
 
-<script>
-  // Loader
-  function hideLoader() {
-    const loader = document.getElementById('loader');
-    if (loader) {
-      loader.classList.add('hidden');
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 500);
+          <!-- RIGHT -->
+          <div data-aos="zoom-in" data-aos-delay="150" style="z-index: 2;">
+            <div class="hero-card">
+              <img src="https://images.unsplash.com/photo-1612810436541-336b5d47c0b1?auto=format&fit=crop&w=900&q=80" alt="Mila Beauty Aesthetic">
+
+              <div class="hero-card-overlay">
+                <div class="badge">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  Nueva colección
+                </div>
+                <a href="#coleccion" class="badge">
+                  Ver más <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         CATEGORÍAS
+    ============================ -->
+    <section class="section white" id="categorias">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <div class="kicker">Explora Mila</div>
+          <h2>Categorías que vas a amar</h2>
+          <div class="divider"></div>
+          <p class="subtitle">
+            Encuentra lo que necesitas para tu rutina diaria, tu glow y tu look perfecto.
+            Todo organizado, aesthetic y fácil de comprar.
+          </p>
+        </div>
+
+        <div class="category-grid">
+
+          <a class="category-card" href="#coleccion" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>Maquillaje</h3>
+              <p>Base, labios, rubores, iluminadores y todo lo que te hace brillar.</p>
+              <div class="tag">
+                <i class="fa-solid fa-heart"></i> Looks Glow
+              </div>
+            </div>
+          </a>
+
+          <a class="category-card" href="#coleccion" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>Skincare</h3>
+              <p>Rutinas limpias, hidratación profunda y cuidado real para tu piel.</p>
+              <div class="tag">
+                <i class="fa-solid fa-seedling"></i> Clean Care
+              </div>
+            </div>
+          </a>
+
+          <a class="category-card" href="#coleccion" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="overlay"></div>
+            <div class="content">
+              <h3>Accesorios</h3>
+              <p>Brochas, esponjas, cosmetiqueras y detalles aesthetic para tu rutina.</p>
+              <div class="tag">
+                <i class="fa-solid fa-star"></i> Essentials
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         PRODUCTOS DESTACADOS
+    ============================ -->
+    <section class="section soft" id="coleccion">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <div class="kicker">Colección Mila</div>
+          <h2>Favoritos del momento</h2>
+          <div class="divider"></div>
+          <p class="subtitle">
+            Estos productos están en tendencia y son perfectos para tu look y tu rutina de cuidado.
+            Puedes preguntar disponibilidad y precio exacto por WhatsApp.
+          </p>
+        </div>
+
+        <div class="products-grid">
+
+          <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="product-body">
+              <h3>Gloss Nude</h3>
+              <p>Labios brillantes, efecto juicy y acabado elegante.</p>
+              <div class="product-meta">
+                <div class="price">$39.900</div>
+                <div class="pill">Best Seller</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="product-body">
+              <h3>Serum Glow</h3>
+              <p>Luminosidad natural con textura ligera y piel hidratada.</p>
+              <div class="product-meta">
+                <div class="price">$59.900</div>
+                <div class="pill">Skincare</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1611930022293-2d17e9f7f8d2?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="product-body">
+              <h3>Rubor Soft Pink</h3>
+              <p>Color delicado, acabado natural y efecto “muñeca premium”.</p>
+              <div class="product-meta">
+                <div class="price">$42.000</div>
+                <div class="pill">Glow</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="product-body">
+              <h3>Crema Hidratante</h3>
+              <p>Textura sedosa, hidratación intensa y piel luminosa.</p>
+              <div class="product-meta">
+                <div class="price">$72.500</div>
+                <div class="pill">Nuevo</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="product-body">
+              <h3>Perfume Mini</h3>
+              <p>Aroma suave y elegante. Perfecto para bolso.</p>
+              <div class="product-meta">
+                <div class="price">$55.000</div>
+                <div class="pill">Trending</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1620916566393-2f1d6b6a7c54?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="product-body">
+              <h3>Kit Brochas</h3>
+              <p>Brochas suaves y aesthetic para un acabado profesional.</p>
+              <div class="product-meta">
+                <div class="price">$68.000</div>
+                <div class="pill">Accesorios</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA Banner -->
+        <div style="margin-top: 60px;" data-aos="fade-up">
+          <div class="cta-banner">
+            <i class="fa-solid fa-sparkles sparkle s1"></i>
+            <i class="fa-solid fa-star sparkle s2"></i>
+
+            <div>
+              <h3>¿No sabes qué elegir?</h3>
+              <p>
+                Te ayudamos a encontrar productos según tu tipo de piel, tu estilo y lo que quieras lograr.
+                Escríbenos y te asesoramos como si fueras una clienta VIP.
+              </p>
+            </div>
+
+            <div class="cta-actions">
+              <a href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20asesor%C3%ADa%20para%20elegir%20productos%20✨" target="_blank" class="btn btn-primary">
+                <i class="fa-brands fa-whatsapp"></i> Asesoría
+              </a>
+              <a href="#como-comprar" class="btn btn-outline">
+                <i class="fa-solid fa-circle-info"></i> Cómo comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+        <!-- ===========================
+         CÓMO COMPRAR
+    ============================ -->
+    <section class="section white" id="como-comprar">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <div class="kicker">Compra fácil</div>
+          <h2>Cómo comprar en Mila</h2>
+          <div class="divider"></div>
+          <p class="subtitle">
+            Queremos que comprar sea fácil, rápido y con una experiencia linda.
+            Te atendemos por WhatsApp y te guiamos en todo.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+
+          <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>Explora el catálogo</h3>
+            <p>
+              Mira nuestras categorías y encuentra lo que más te guste.
+              Cada producto tiene detalles y sugerencias.
+            </p>
+          </div>
+
+          <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <h3>Escríbenos</h3>
+            <p>
+              Nos dices qué producto quieres o qué necesitas.
+              Si no estás segura, te asesoramos según tu piel.
+            </p>
+          </div>
+
+          <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3>Recíbelo en casa</h3>
+            <p>
+              Enviamos a toda Colombia.
+              Empaque lindo, seguro y con vibra Mila.
+            </p>
+          </div>
+
+          <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="step-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Glow time</h3>
+            <p>
+              Disfruta tu compra y guarda Mila en favoritos.
+              Queremos que siempre te sientas hermosa.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         MILA PICKS (POR OBJETIVO)
+    ============================ -->
+    <section class="section soft" id="mila-picks">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <div class="kicker">Mila Picks</div>
+          <h2>Elige según tu objetivo</h2>
+          <div class="divider"></div>
+          <p class="subtitle">
+            Esta parte es para que tu web se sienta más “tienda real” y no solo landing.
+            Aquí la gente entra y dice: “wow, hay opciones”.
+          </p>
+        </div>
+
+        <style>
+          .picks-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 22px;
+          }
+
+          .pick-card {
+            grid-column: span 6;
+            background: rgba(255,255,255,0.92);
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 34px;
+            padding: 30px;
+            box-shadow: 0 16px 45px rgba(0,0,0,0.06);
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            gap: 22px;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            transition: 0.3s ease;
+          }
+
+          .pick-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(184,76,110,0.20);
+          }
+
+          .pick-card h3 {
+            font-size: 2.1rem;
+            margin-bottom: 8px;
+          }
+
+          .pick-card p {
+            color: var(--gray-500);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+          }
+
+          .pick-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+          }
+
+          .pick-tag {
+            font-size: 0.82rem;
+            font-weight: 900;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(184,76,110,0.18);
+            background: rgba(184,76,110,0.08);
+            color: var(--rose-400);
+            letter-spacing: 0.4px;
+          }
+
+          .pick-img {
+            width: 100%;
+            height: 240px;
+            border-radius: 28px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 14px 35px rgba(0,0,0,0.05);
+          }
+
+          .pick-card .sparkle {
+            opacity: 0.14;
+            font-size: 3.2rem;
+          }
+
+          .pick-card .sparkle.s1 {
+            top: 18px;
+            right: 25px;
+          }
+
+          .pick-card .sparkle.s2 {
+            bottom: 25px;
+            left: 25px;
+          }
+
+          @media (max-width: 950px) {
+            .pick-card {
+              grid-column: span 12;
+              grid-template-columns: 1fr;
+            }
+
+            .pick-img {
+              height: 260px;
+            }
+          }
+        </style>
+
+        <div class="picks-grid">
+
+          <div class="pick-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fa-solid fa-star sparkle s1"></i>
+            <i class="fa-solid fa-sparkles sparkle s2"></i>
+
+            <div>
+              <h3>Glow Natural</h3>
+              <p>
+                Perfecto si quieres una piel luminosa, jugosa y con acabado saludable.
+                Rutina suave y estética.
+              </p>
+
+              <div class="pick-tags">
+                <div class="pick-tag">Serums</div>
+                <div class="pick-tag">Hidratación</div>
+                <div class="pick-tag">Dewy</div>
+              </div>
+
+              <a class="btn btn-primary" target="_blank"
+                 href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20productos%20para%20Glow%20Natural%20✨">
+                <i class="fa-brands fa-whatsapp"></i> Quiero este glow
+              </a>
+            </div>
+
+            <div class="pick-img" style="background-image:url('https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=80');"></div>
+          </div>
+
+          <div class="pick-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-solid fa-heart sparkle s1"></i>
+            <i class="fa-solid fa-star sparkle s2"></i>
+
+            <div>
+              <h3>Makeup Soft</h3>
+              <p>
+                Maquillaje delicado, elegante, romántico.
+                Ideal si te gusta verte arreglada pero sin exceso.
+              </p>
+
+              <div class="pick-tags">
+                <div class="pick-tag">Rubores</div>
+                <div class="pick-tag">Gloss</div>
+                <div class="pick-tag">Iluminadores</div>
+              </div>
+
+              <a class="btn btn-outline" target="_blank"
+                 href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20un%20kit%20de%20Makeup%20Soft%20💕">
+                <i class="fa-brands fa-whatsapp"></i> Quiero mi kit
+              </a>
+            </div>
+
+            <div class="pick-img" style="background-image:url('https://images.unsplash.com/photo-1612810436541-336b5d47c0b1?auto=format&fit=crop&w=900&q=80');"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         CATÁLOGO ESTILO NOTION (VISUAL)
+    ============================ -->
+    <section class="section white" id="catalogo">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <div class="kicker">Catálogo Mila</div>
+          <h2>Catálogo rápido (tipo Notion)</h2>
+          <div class="divider"></div>
+          <p class="subtitle">
+            Esta sección es CLAVE para que tu web se sienta completa y organizada.
+            Aquí la gente puede filtrar rápido y ver lo que hay.
+          </p>
+        </div>
+
+        <style>
+          .catalog-wrap {
+            background: rgba(255,255,255,0.92);
+            border-radius: 34px;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 18px 55px rgba(0,0,0,0.06);
+            overflow: hidden;
+          }
+
+          .catalog-header {
+            padding: 24px 26px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(248,225,234,0.35) 0%, rgba(255,255,255,0.8) 100%);
+          }
+
+          .catalog-header h3 {
+            font-size: 1.8rem;
+          }
+
+          .catalog-tools {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+          }
+
+          .catalog-tools input,
+          .catalog-tools select {
+            padding: 12px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(184,76,110,0.25);
+            outline: none;
+            font-family: "Manrope", sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            min-width: 190px;
+            background: rgba(255,255,255,0.85);
+            transition: 0.2s ease;
+          }
+
+          .catalog-tools input:focus,
+          .catalog-tools select:focus {
+            box-shadow: 0 0 0 6px rgba(184,76,110,0.08);
+            border-color: rgba(184,76,110,0.55);
+          }
+
+          .catalog-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+          }
+
+          .catalog-table thead {
+            background: rgba(254,244,247,0.8);
+          }
+
+          .catalog-table th {
+            padding: 16px 18px;
+            text-align: left;
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: rgba(44,44,44,0.7);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+          }
+
+          .catalog-table td {
+            padding: 18px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            vertical-align: middle;
+          }
+
+          .catalog-row:hover {
+            background: rgba(248,225,234,0.25);
+          }
+
+          .catalog-product {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+          }
+
+          .catalog-thumb {
+            width: 58px;
+            height: 58px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            flex-shrink: 0;
+          }
+
+          .catalog-name {
+            font-weight: 900;
+            color: var(--black);
+          }
+
+          .catalog-desc {
+            color: var(--gray-500);
+            font-size: 0.88rem;
+            margin-top: 3px;
+            max-width: 330px;
+          }
+
+          .tag-mini {
+            display: inline-flex;
+            padding: 7px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(184,76,110,0.20);
+            background: rgba(184,76,110,0.08);
+            font-weight: 900;
+            color: var(--rose-400);
+            font-size: 0.78rem;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+          }
+
+          .btn-mini {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(184,76,110,0.22);
+            background: rgba(184,76,110,0.10);
+            color: var(--rose-400);
+            font-weight: 900;
+            font-size: 0.85rem;
+            transition: 0.25s ease;
+            cursor: pointer;
+            white-space: nowrap;
+          }
+
+          .btn-mini:hover {
+            background: var(--rose-400);
+            color: white;
+            transform: translateY(-2px);
+          }
+
+          @media (max-width: 950px) {
+            .catalog-table thead {
+              display: none;
+            }
+
+            .catalog-table,
+            .catalog-table tbody,
+            .catalog-table tr,
+            .catalog-table td {
+              display: block;
+              width: 100%;
+            }
+
+            .catalog-table tr {
+              padding: 16px 0;
+            }
+
+            .catalog-table td {
+              border-bottom: none;
+              padding: 10px 18px;
+            }
+
+            .catalog-table td:last-child {
+              padding-bottom: 18px;
+              border-bottom: 1px solid rgba(0,0,0,0.06);
+            }
+
+            .catalog-desc {
+              max-width: 100%;
+            }
+          }
+        </style>
+
+        <div class="catalog-wrap" data-aos="fade-up">
+
+          <div class="catalog-header">
+            <h3>Lista de productos</h3>
+
+            <div class="catalog-tools">
+              <input type="text" id="searchInput" placeholder="Buscar producto..." />
+              <select id="categoryFilter">
+                <option value="all">Todas las categorías</option>
+                <option value="skincare">Skincare</option>
+                <option value="makeup">Maquillaje</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="perfumes">Perfumes</option>
+              </select>
+            </div>
+          </div>
+
+          <table class="catalog-table" id="catalogTable">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+
+            <tbody id="catalogBody">
+
+              <tr class="catalog-row" data-category="makeup">
+                <td>
+                  <div class="catalog-product">
+                    <div class="catalog-thumb" style="background-image:url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div>
+                      <div class="catalog-name">Gloss Nude Shine</div>
+                      <div class="catalog-desc">Brillo elegante, labios suaves y look natural.</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tag-mini">Maquillaje</span></td>
+                <td><b style="color: var(--rose-400);">$39.900</b></td>
+                <td>
+                  <a class="btn-mini" target="_blank"
+                     href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20el%20Gloss%20Nude%20Shine%20✨">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="catalog-row" data-category="skincare">
+                <td>
+                  <div class="catalog-product">
+                    <div class="catalog-thumb" style="background-image:url('https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div>
+                      <div class="catalog-name">Serum Glow Hydration</div>
+                      <div class="catalog-desc">Piel luminosa, hidratación ligera y efecto glass skin.</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tag-mini">Skincare</span></td>
+                <td><b style="color: var(--rose-400);">$59.900</b></td>
+                <td>
+                  <a class="btn-mini" target="_blank"
+                     href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20el%20Serum%20Glow%20Hydration%20✨">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="catalog-row" data-category="skincare">
+                <td>
+                  <div class="catalog-product">
+                    <div class="catalog-thumb" style="background-image:url('https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div>
+                      <div class="catalog-name">Crema Soft Hydrating</div>
+                      <div class="catalog-desc">Hidratación profunda y textura sedosa para tu rutina.</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tag-mini">Skincare</span></td>
+                <td><b style="color: var(--rose-400);">$72.500</b></td>
+                <td>
+                  <a class="btn-mini" target="_blank"
+                     href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20la%20Crema%20Soft%20Hydrating%20✨">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="catalog-row" data-category="makeup">
+                <td>
+                  <div class="catalog-product">
+                    <div class="catalog-thumb" style="background-image:url('https://images.unsplash.com/photo-1611930022293-2d17e9f7f8d2?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div>
+                      <div class="catalog-name">Rubor Soft Pink</div>
+                      <div class="catalog-desc">Rubor delicado, efecto romántico y acabado natural.</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tag-mini">Maquillaje</span></td>
+                <td><b style="color: var(--rose-400);">$42.000</b></td>
+                <td>
+                  <a class="btn-mini" target="_blank"
+                     href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20el%20Rubor%20Soft%20Pink%20✨">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="catalog-row" data-category="accesorios">
+                <td>
+                  <div class="catalog-product">
+                    <div class="catalog-thumb" style="background-image:url('https://images.unsplash.com/photo-1620916566393-2f1d6b6a7c54?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div>
+                      <div class="catalog-name">Kit Brochas Aesthetic</div>
+                      <div class="catalog-desc">Brochas suaves, acabado profesional y súper aesthetic.</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tag-mini">Accesorios</span></td>
+                <td><b style="color: var(--rose-400);">$68.000</b></td>
+                <td>
+                  <a class="btn-mini" target="_blank"
+                     href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20el%20Kit%20Brochas%20Aesthetic%20✨">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                  </a>
+                </td>
+              </tr>
+
+              <tr class="catalog-row" data-category="perfumes">
+                <td>
+                  <div class="catalog-product">
+                    <div class="catalog-thumb" style="background-image:url('https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=400&q=80');"></div>
+                    <div>
+                      <div class="catalog-name">Perfume Mini Elegant</div>
+                      <div class="catalog-desc">Aroma suave, femenino y perfecto para llevar en bolso.</div>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tag-mini">Perfumes</span></td>
+                <td><b style="color: var(--rose-400);">$55.000</b></td>
+                <td>
+                  <a class="btn-mini" target="_blank"
+                     href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20el%20Perfume%20Mini%20Elegant%20✨">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                  </a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         RESEÑAS (TESTIMONIOS)
+    ============================ -->
+    <section class="section soft" id="resenas">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <div class="kicker">Opiniones</div>
+          <h2>Lo que dicen nuestras clientas</h2>
+          <div class="divider"></div>
+          <p class="subtitle">
+            Mila no es solo estética: es calidad, asesoría y productos que se sienten premium.
+          </p>
+        </div>
+
+        <style>
+          .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+          }
+
+          .review-card {
+            background: rgba(255,255,255,0.92);
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 18px 50px rgba(0,0,0,0.06);
+            transition: 0.3s ease;
+            position: relative;
+          }
+
+          .review-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(184,76,110,0.20);
+          }
+
+          .review-stars {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 14px;
+            color: #d8a53a;
+          }
+
+          .review-card p {
+            color: var(--gray-500);
+            font-size: 1rem;
+            line-height: 1.8;
+          }
+
+          .review-user {
+            margin-top: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+
+          .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(184,76,110,0.12);
+            border: 1px solid rgba(184,76,110,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--rose-400);
+            font-weight: 900;
+          }
+
+          .review-user strong {
+            display: block;
+            font-weight: 900;
+            font-size: 0.98rem;
+          }
+
+          .review-user span {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(44,44,44,0.65);
+            font-weight: 700;
+          }
+
+          .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 2.4rem;
+            color: rgba(184,76,110,0.14);
+          }
+        </style>
+
+        <div class="reviews-grid">
+
+          <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fa-solid fa-quote-right quote-icon"></i>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              “Compré el serum glow y literal mi piel se ve más luminosa.
+              Además la atención por WhatsApp fue súper linda y rápida.”
+            </p>
+            <div class="review-user">
+              <div class="review-avatar">M</div>
+              <div>
+                <strong>Mariana G.</strong>
+                <span>Clienta Mila</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-solid fa-quote-right quote-icon"></i>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              “El rubor soft pink es precioso, se ve súper natural y elegante.
+              Me encantó el empaque y todo se siente premium.”
+            </p>
+            <div class="review-user">
+              <div class="review-avatar">V</div>
+              <div>
+                <strong>Valentina R.</strong>
+                <span>Clienta Mila</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fa-solid fa-quote-right quote-icon"></i>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              “Me encanta Mila porque no se siente como una tienda normal.
+              Se siente como una marca real, todo es aesthetic y organizado.”
+            </p>
+            <div class="review-user">
+              <div class="review-avatar">C</div>
+              <div>
+                <strong>Camila S.</strong>
+                <span>Clienta Mila</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         FAQ
+    ============================ -->
+    <section class="section white" id="faq">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <div class="kicker">Preguntas</div>
+          <h2>Preguntas frecuentes</h2>
+          <div class="divider"></div>
+          <p class="subtitle">
+            Para que tu web se vea seria y profesional, esta sección es demasiado importante.
+          </p>
+        </div>
+
+        <style>
+          .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 35px;
+          }
+
+          .faq-item {
+            background: rgba(255,255,255,0.92);
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 26px;
+            box-shadow: 0 14px 45px rgba(0,0,0,0.06);
+            overflow: hidden;
+            transition: 0.3s ease;
+          }
+
+          .faq-item:hover {
+            border-color: rgba(184,76,110,0.20);
+            transform: translateY(-4px);
+          }
+
+          .faq-question {
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 1rem;
+            color: rgba(44,44,44,0.85);
+          }
+
+          .faq-question i {
+            color: var(--rose-400);
+            transition: 0.25s ease;
+            margin-top: 3px;
+          }
+
+          .faq-answer {
+            padding: 0 20px 18px;
+            color: var(--gray-500);
+            font-size: 0.98rem;
+            line-height: 1.8;
+            display: none;
+          }
+
+          .faq-item.active .faq-answer {
+            display: block;
+          }
+
+          .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+          }
+
+          @media (max-width: 950px) {
+            .faq-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        </style>
+
+        <div class="faq-grid" data-aos="fade-up">
+
+          <div class="faq-item">
+            <div class="faq-question">
+              ¿Cómo hago un pedido?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Puedes ver el catálogo y luego escribirnos por WhatsApp.
+              Nos dices qué producto quieres y te confirmamos disponibilidad, precio y envío.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              ¿Hacen envíos a toda Colombia?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Sí. Hacemos envíos nacionales y te enviamos guía de seguimiento.
+              El tiempo depende de tu ciudad, pero normalmente es rápido.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              ¿Los productos son originales?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Sí. Seleccionamos productos originales y de alta calidad.
+              Si tienes dudas, puedes pedirnos fotos o referencias antes de comprar.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              ¿Puedo pedir asesoría?
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Claro. Te asesoramos según tu tipo de piel, tus gustos y tu estilo.
+              Mila es una experiencia personalizada, no solo una tienda.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         NOSOTRAS
+    ============================ -->
+    <section class="section soft" id="nosotras">
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-img" data-aos="fade-right">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=80" alt="Mila Beauty Story">
+          </div>
+
+          <div class="about-text" data-aos="fade-left">
+            <div class="kicker">Sobre Mila</div>
+            <h2>Mila Beauty</h2>
+            <div class="divider"></div>
+
+            <p>
+              Mila nació para ser una marca diferente: estética, delicada y organizada.
+              Creemos que la belleza no es exagerada, es sutil, limpia y con personalidad.
+            </p>
+
+            <p>
+              Aquí encuentras productos seleccionados para elevar tu rutina:
+              maquillaje, skincare y accesorios que se sienten premium.
+              Y lo mejor: siempre te asesoramos como si fueras parte de Mila.
+            </p>
+
+            <div class="about-bullets">
+              <div class="bullet"><i class="fa-solid fa-check"></i> Selección premium y estética</div>
+              <div class="bullet"><i class="fa-solid fa-check"></i> Atención personalizada por WhatsApp</div>
+              <div class="bullet"><i class="fa-solid fa-check"></i> Envíos a toda Colombia</div>
+              <div class="bullet"><i class="fa-solid fa-check"></i> Glow natural y vibes femeninas</div>
+            </div>
+
+            <div style="margin-top: 28px;">
+              <a href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20conocer%20m%C3%A1s%20de%20la%20marca%20✨"
+                 target="_blank" class="btn btn-primary">
+                <i class="fa-brands fa-whatsapp"></i> Hablar con Mila
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+        <!-- ===========================
+         INSTAGRAM
+    ============================ -->
+    <section class="section white" id="instagram">
+      <div class="container">
+
+        <div class="section-header" data-aos="fade-up">
+          <div class="kicker">Mila Aesthetic</div>
+          <h2>@milabeauty</h2>
+          <div class="divider"></div>
+          <p class="subtitle">
+            Síguenos para ver inspiración, rutinas, reseñas y nuevos productos.
+            Mila es una vibra.
+          </p>
+        </div>
+
+        <div class="insta-grid" data-aos="fade-up" data-aos-delay="150">
+
+          <div class="insta-item" data-img="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80"
+               style="background-image:url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80');">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+
+          <div class="insta-item" data-img="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=1200&q=80"
+               style="background-image:url('https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=900&q=80');">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+
+          <div class="insta-item" data-img="https://images.unsplash.com/photo-1611930022293-2d17e9f7f8d2?auto=format&fit=crop&w=1200&q=80"
+               style="background-image:url('https://images.unsplash.com/photo-1611930022293-2d17e9f7f8d2?auto=format&fit=crop&w=900&q=80');">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+
+          <div class="insta-item" data-img="https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=1200&q=80"
+               style="background-image:url('https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=900&q=80');">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+
+          <div class="insta-item" data-img="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1200&q=80"
+               style="background-image:url('https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=80');">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+
+          <div class="insta-item" data-img="https://images.unsplash.com/photo-1585232351009-aa87416fca90?auto=format&fit=crop&w=1200&q=80"
+               style="background-image:url('https://images.unsplash.com/photo-1585232351009-aa87416fca90?auto=format&fit=crop&w=900&q=80');">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+
+          <div class="insta-item" data-img="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?auto=format&fit=crop&w=1200&q=80"
+               style="background-image:url('https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?auto=format&fit=crop&w=900&q=80');">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+
+          <div class="insta-item" data-img="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=1200&q=80"
+               style="background-image:url('https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=900&q=80');">
+            <div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top: 40px;" data-aos="fade-up">
+          <a href="https://www.instagram.com/" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-instagram"></i> Ver Instagram
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===========================
+         NEWSLETTER + CONTACTO
+    ============================ -->
+    <section class="section soft" id="contacto">
+      <div class="container">
+
+        <div class="newsletter-box" data-aos="fade-up">
+          <div class="kicker">Mila Club</div>
+          <h2>Suscríbete</h2>
+          <p>
+            Recibe lanzamientos, promociones y recomendaciones exclusivas.
+            Sin spam, solo vibes Mila.
+          </p>
+
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-solid fa-envelope"></i> Unirme
+            </button>
+          </form>
+
+          <div style="margin-top: 30px;">
+            <p style="font-weight:900; color: rgba(44,44,44,0.85); margin-bottom: 12px;">
+              O escríbenos directo:
+            </p>
+
+            <div style="display:flex; justify-content:center; gap: 14px; flex-wrap:wrap;">
+              <a class="btn btn-outline" target="_blank"
+                 href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20informaci%C3%B3n%20✨">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+
+              <a class="btn btn-soft" target="_blank" href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i> Instagram
+              </a>
+
+              <a class="btn btn-soft" target="_blank" href="https://www.tiktok.com/">
+                <i class="fa-brands fa-tiktok"></i> TikTok
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===========================
+       FOOTER
+  ============================ -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#inicio" class="logo">Mila <span class="logo-dot"></span></a>
+          <p>
+            Beauty & skincare con estética premium.
+            Productos seleccionados, asesoría personalizada y un catálogo organizado
+            para que encuentres lo que amas.
+          </p>
+
+          <div class="social-row" style="margin-top: 20px;">
+            <a class="social-btn" target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-btn" target="_blank" href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+            <a class="social-btn" target="_blank" href="https://wa.me/57TU_NUMERO"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explorar</h4>
+          <a href="#categorias">Categorías</a>
+          <a href="#coleccion">Colección</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#mila-picks">Mila Picks</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Información</h4>
+          <a href="#como-comprar">Cómo comprar</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#faq">Preguntas frecuentes</a>
+          <a href="#nosotras">Nosotras</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="#contacto">Newsletter</a>
+          <a target="_blank" href="https://wa.me/57TU_NUMERO">WhatsApp</a>
+          <a target="_blank" href="https://www.instagram.com/">Instagram</a>
+          <a target="_blank" href="https://www.tiktok.com/">TikTok</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Mila Beauty — Todos los derechos reservados.</div>
+        <div>Glow que transforma ✨</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/57TU_NUMERO?text=Hola%20Mila%20Beauty%2C%20quiero%20hacer%20un%20pedido%20✨"
+     class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ===========================
+       MODAL INSTAGRAM (POPUP)
+  ============================ -->
+  <style>
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 22px;
+      z-index: 999999;
     }
-  }
 
-  document.addEventListener('DOMContentLoaded', hideLoader);
-  window.addEventListener('load', hideLoader);
-  setTimeout(hideLoader, 3000);
-
-  // Menú hamburguesa
-  const menuIcon = document.getElementById('menuIcon');
-  const navLinks = document.getElementById('navLinks');
-  if (menuIcon && navLinks) {
-    menuIcon.addEventListener('click', () => navLinks.classList.toggle('active'));
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('active'));
-    });
-  }
-
-  // Navegación suave
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  // Contador
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 30);
-  function updateCountdown() {
-    const now = new Date();
-    const diff = targetDate - now;
-    if (diff <= 0) {
-      document.getElementById('days').innerText = '00';
-      document.getElementById('hours').innerText = '00';
-      document.getElementById('minutes').innerText = '00';
-      document.getElementById('seconds').innerText = '00';
-      return;
+    .modal.active {
+      display: flex;
     }
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (86400000)) / 3600000);
-    const minutes = Math.floor((diff % 3600000) / 60000);
-    const seconds = Math.floor((diff % 60000) / 1000);
-    document.getElementById('days').innerText = days.toString().padStart(2, '0');
-    document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
 
-  // Carrusel
-  let currentSlide = 0;
-  const slides = document.querySelector('.carousel-slides');
-  const totalSlides = document.querySelectorAll('.carousel-slide').length;
-  if (slides && totalSlides > 0) {
-    function updateCarousel() { slides.style.transform = `translateX(-${currentSlide * 100}%)`; }
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    if (prevBtn) prevBtn.addEventListener('click', () => { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; updateCarousel(); });
-    if (nextBtn) nextBtn.addEventListener('click', () => { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); });
-    setInterval(() => { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); }, 5000);
-  }
+    .modal-content {
+      max-width: 850px;
+      width: 100%;
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.25);
+      position: relative;
+    }
 
-  // FAQ
-  document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
-  });
+    .modal-content img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
 
-  // Scroll top
-  const scrollTop = document.getElementById('scrollTop');
-  if (scrollTop) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) scrollTop.classList.add('visible');
-      else scrollTop.classList.remove('visible');
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--rose-400);
+      transition: 0.2s ease;
+    }
+
+    .modal-close:hover {
+      background: var(--rose-400);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media(max-width: 768px){
+      .modal-content img {
+        height: 360px;
+      }
+    }
+  </style>
+
+  <div class="modal" id="instaModal">
+    <div class="modal-content">
+      <div class="modal-close" id="modalClose">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <img src="" id="modalImage" alt="Instagram Mila Preview">
+    </div>
+  </div>
+
+  <!-- ===========================
+       SCRIPTS
+  ============================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 850,
+      once: true,
+      offset: 90
     });
-    scrollTop.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
 
-  // Newsletter
-  const newsletterForm = document.getElementById('newsletterForm');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('¡Gracias por suscribirte! Pronto recibirás novedades de Mila Beauty.');
-      newsletterForm.reset();
+    /* =============================
+       MENÚ MOBILE
+    ============================== */
+    const menuIcon = document.getElementById("menuIcon");
+    const navLinks = document.getElementById("navLinks");
+
+    if(menuIcon && navLinks){
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
+    }
+
+    /* =============================
+       NEWSLETTER (FAKE DEMO)
+    ============================== */
+    const newsletterForm = document.getElementById("newsletterForm");
+    const newsletterEmail = document.getElementById("newsletterEmail");
+
+    if(newsletterForm){
+      newsletterForm.addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("✨ Gracias por unirte al Mila Club. Te llegará info hermosa pronto.");
+        newsletterForm.reset();
+      });
+    }
+
+    /* =============================
+       FAQ ACCORDION
+    ============================== */
+    document.querySelectorAll(".faq-item").forEach(item => {
+      item.querySelector(".faq-question").addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
     });
-  }
-</script>
+
+    /* =============================
+       FILTRO CATÁLOGO + BUSCADOR
+    ============================== */
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const catalogRows = document.querySelectorAll(".catalog-row");
+
+    function filterCatalog(){
+      const searchValue = searchInput.value.toLowerCase();
+      const categoryValue = categoryFilter.value;
+
+      catalogRows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const rowCategory = row.getAttribute("data-category");
+
+        const matchSearch = text.includes(searchValue);
+        const matchCategory = (categoryValue === "all" || categoryValue === rowCategory);
+
+        if(matchSearch && matchCategory){
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    }
+
+    if(searchInput && categoryFilter){
+      searchInput.addEventListener("input", filterCatalog);
+      categoryFilter.addEventListener("change", filterCatalog);
+    }
+
+    /* =============================
+       MODAL INSTAGRAM
+    ============================== */
+    const instaItems = document.querySelectorAll(".insta-item");
+    const instaModal = document.getElementById("instaModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalClose = document.getElementById("modalClose");
+
+    instaItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const img = item.getAttribute("data-img");
+        modalImage.src = img;
+        instaModal.classList.add("active");
+      });
+    });
+
+    if(modalClose){
+      modalClose.addEventListener("click", () => {
+        instaModal.classList.remove("active");
+      });
+    }
+
+    if(instaModal){
+      instaModal.addEventListener("click", (e) => {
+        if(e.target === instaModal){
+          instaModal.classList.remove("active");
+        }
+      });
+    }
+
+  </script>
 
 </body>
 </html>
