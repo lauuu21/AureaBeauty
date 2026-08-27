@@ -699,11 +699,11 @@
             <div class="kicker">Mila</div>
 
             <h1 class="hero-title">
-              Encuentra algo <span>muy Mila</span>
+              Descubre tus <span>nuevos favoritos en Mila</span>
             </h1>
 
             <p class="hero-text">
-              Accesorios y productos con un estilo delicado y femenino.
+              Detalles, accesorios y productos para cada ocasión.
             </p>
 
             <div class="hero-buttons">
@@ -724,8 +724,8 @@
               </div>
 
               <div class="stat">
-                <h3>Estilo Mila</h3>
-                <p>Detalles delicados y femeninos</p>
+                <h3>Conoce Mila</h3>
+                <p>Tu próxima elección</p>
               </div>
 
               <div class="stat">
@@ -862,10 +862,10 @@
 
             <div class="product-body">
 
-              <h3>Gloss Nude</h3>
+              <h3>Gel de cejas Melu</h3>
 
               <div class="product-meta">
-                <div class="price">$39.900</div>
+                <div class="price">$18.000</div>
                 <div class="pill">Favorito</div>
               </div>
 
@@ -883,10 +883,10 @@
 
             <div class="product-body">
 
-              <h3>Serum Facial</h3>
+              <h3>Gel hidratante Girly</h3>
 
               <div class="product-meta">
-                <div class="price">$59.900</div>
+                <div class="price">$29.000</div>
                 <div class="pill">Skincare</div>
               </div>
 
@@ -904,11 +904,11 @@
 
             <div class="product-body">
 
-              <h3>Rubor Soft Pink</h3>
+              <h3>Rubor Ani-k Bonita</h3>
 
               <div class="product-meta">
-                <div class="price">$42.000</div>
-                <div class="pill">Nuevo</div>
+                <div class="price">$24.000</div>
+                <div class="pill">Favorito</div>
               </div>
 
             </div>
@@ -925,11 +925,11 @@
 
             <div class="product-body">
 
-              <h3>Crema Hidratante</h3>
+              <h3>Base profesional Elaya</h3>
 
               <div class="product-meta">
-                <div class="price">$72.500</div>
-                <div class="pill">Disponible</div>
+                <div class="price">$22.000</div>
+                <div class="pill">Maquillaje</div>
               </div>
 
             </div>
